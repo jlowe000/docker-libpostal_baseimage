@@ -20,12 +20,6 @@ RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpost
 RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
 RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
 RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
-RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
-RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
-RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
-RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
-RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
-RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
 
 RUN make && \
     DESTDIR=/libpostal make install && \
