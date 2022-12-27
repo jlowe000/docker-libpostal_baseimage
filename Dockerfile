@@ -21,12 +21,17 @@ RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpost
 RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
 RUN /code/libpostal/src/libpostal_data download all /usr/share/libpostal/libpostal; exit 0
 
+# Execute to allow service to build
 RUN make && \
-    DESTDIR=/libpostal make install && \
+    make install && \
     ldconfig
 
-# main image
-FROM pelias/baseimage
+# RUN make && \
+#     DESTDIR=/libpostal make install && \
+#     ldconfig
 
-COPY --from=builder /usr/share/libpostal /usr/share/libpostal
-COPY --from=builder /libpostal /
+# main image
+# FROM pelias/baseimage
+
+# COPY --from=builder /usr/share/libpostal /usr/share/libpostal
+# COPY --from=builder /libpostal /
